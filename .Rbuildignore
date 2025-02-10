@@ -1,0 +1,5 @@
+^hydromonitor\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^appveyor\.yml$
+^\.travis\.yml$

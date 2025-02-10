@@ -1,0 +1,25 @@
+Package: hydromonitor
+Title: Handle HydroMonitor Data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Kees",
+           family = "van Immerzeel",
+           role = c("aut", "cre"),
+           email = "c.h.van.immerzeel@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0003-0926-3248"))
+Description: Read, write and manipulate HydroMonitor Data.
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    magrittr,
+    lubridate,
+    dplyr,
+    ggplot2,
+    terra
+Depends: 
+    R (>= 3.5)
+Suggests: 
+    testthat
