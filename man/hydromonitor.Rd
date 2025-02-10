@@ -2,16 +2,29 @@
 % Please edit documentation in R/hydromonitor.R
 \name{hydromonitor}
 \alias{hydromonitor}
-\title{hydromonitor: A package read / write / manipulate \href{https://www.kwrwater.nl/tools-producten/hydromonitor/}{HydroMonitor} Observationwell data.}
+\title{hydromonitor: Read / write / manipulate \href{https://www.kwrwater.nl/tools-producten/hydromonitor/}{HydroMonitor} Observationwell data.}
 \description{
-This package exports the following sample data sets/objects:
-\itemize{
-\item hm1, hm2: HydroMonitor ObservationWell Data. Can be read with \code{\link{read_export_csv}}.
-\item polygn: Polygon shape used in examples.
-}
+Hydromonitor data is converted to an intern format: HydroMonitor ObservationWell Data (HMOWD).
 }
 \details{
-This package exports the following functions:
+Structure of HMOWD: list of two data.frames:
+\itemize{
+\item data.frame \code{hm} with fields:
+NAME: chr
+FILTER: int
+X     : int
+Y     : int
+TOP   : num
+BOT   : num
+MV    : num
+\item data.frame \code{xm}with fields:
+NAME  : chr
+FILTER: int
+DATE  : POSIXct
+HEAD  : num
+}
+
+Functions:
 \itemize{
 \item \code{\link{read_export_csv}}
 \item \code{\link{read_export_csv2}}
@@ -30,5 +43,10 @@ This package exports the following functions:
 \item \code{\link{calc_gxg}}
 \item \code{\link{create_shp}}
 \item \code{\link{nr_obs_ratio}}
+}
+
+Datasets:
+\itemize{
+\item hm1, hm2: HydroMonitor ObservationWell Data. Can be read with \code{\link{read_export_csv}}.
 }
 }

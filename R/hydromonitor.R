@@ -1,10 +1,25 @@
-#' hydromonitor: A package read / write / manipulate \href{https://www.kwrwater.nl/tools-producten/hydromonitor/}{HydroMonitor} Observationwell data.
+#' hydromonitor: Read / write / manipulate \href{https://www.kwrwater.nl/tools-producten/hydromonitor/}{HydroMonitor} Observationwell data.
 #'
-#' This package exports the following sample data sets/objects:
-#' - hm1, hm2: HydroMonitor ObservationWell Data. Can be read with \code{\link{read_export_csv}}.
-#' - polygn: Polygon shape used in examples.
+#' Hydromonitor data is converted to an intern format: HydroMonitor ObservationWell Data (HMOWD).
 #'
-#' This package exports the following functions:
+#' Structure of HMOWD: list of two data.frames:
+#'
+#' - data.frame `hm` with fields:
+#' NAME: chr
+#' FILTER: int
+#' X     : int
+#' Y     : int
+#' TOP   : num
+#' BOT   : num
+#' MV    : num
+#'
+#' - data.frame `xm`with fields:
+#' NAME  : chr
+#' FILTER: int
+#' DATE  : POSIXct
+#' HEAD  : num
+#'
+#' Functions:
 #'
 #' * \code{\link{read_export_csv}}
 #' * \code{\link{read_export_csv2}}
@@ -23,6 +38,9 @@
 #' * \code{\link{calc_gxg}}
 #' * \code{\link{create_shp}}
 #' * \code{\link{nr_obs_ratio}}
+#'
+#' Datasets:
+#' - hm1, hm2: HydroMonitor ObservationWell Data. Can be read with \code{\link{read_export_csv}}.
 #'
 #' @name hydromonitor
 #'

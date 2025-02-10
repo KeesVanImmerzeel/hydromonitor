@@ -21,6 +21,6 @@ Filter HydroMonitor ObservationWell data on year.
 }
 \examples{
 \dontrun{
-filtered <- hm1 |> filter_on_year( minyear=2000)
+hm_filtered <- hm1 |> filter_on_year( minyear=2000)
 }
 }

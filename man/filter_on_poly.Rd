@@ -26,6 +26,6 @@ Only polygon shapes of length=1 can be used.
 \dontrun{
 hm <- hm1
 p <- system.file("extdata","polygn.shp",package="hydromonitor") |> terra::vect()
-filtered_on_polygon <- filter_on_poly(hm, p)
+hm_filtered_on_polygon <- filter_on_poly(hm, p)
 }
 }

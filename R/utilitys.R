@@ -20,7 +20,7 @@ rm_fltrs_with_no_obs <- function( hm ) {
 #' @return Filtered HydroMonitor ObservationWell data
 #' @examples
 #' \dontrun{
-#' filtered <- hm1 |> filter_on_year( minyear=2000)
+#' hm_filtered <- hm1 |> filter_on_year( minyear=2000)
 #' }
 #' @export
 filter_on_year <- function( hm, minyear=1900, maxyear=3000 ) {
@@ -304,26 +304,24 @@ create_shp <- function(hm, crs="EPSG:28992") {
 #' \dontrun{
 #' hm <- hm1
 #' p <- system.file("extdata","polygn.shp",package="hydromonitor") |> terra::vect()
-#' filtered_on_polygon <- filter_on_poly(hm, p)
+#' hm_filtered_on_polygon <- filter_on_poly(hm, p)
 #' }
 #' @export
 filter_on_poly <- function(hm, p, crs="EPSG:28992") {
   if (length(p)==1) { # single polygon
     # Create a shape file from HydroMonitor ObservationWell data object.
-    filename <-  file.path(path.expand("~"),"tmp.shp")
-    hmpointshape <- create_shp( hm, filename)
+    hmpointshape <- create_shp( hm)
 
     # Make sure the point shape and polygon shape have the same CRS
     p %<>% terra::project(crs)
     hmpointshape %<>% terra::project(crs)
 
     # Spatial overlay
-    i <- terra::crop(hmpointshape, p)
-    sel_names <- names(i)
+    i <- hmpointshape |> terra::crop(p)
 
     #Filter meta data gegevens en stijghoogte gegevens
-    hm$xm %<>% dplyr::filter(NAME %in% sel_names )
-    hm$xd %<>% dplyr::semi_join(hm$xm, by = "NAME")
+    hm$xm %<>% dplyr::filter(NAME %in% i$NAME )
+    hm$xd %<>% dplyr::filter(NAME %in% i$NAME)
   }
   return(hm)
 }
