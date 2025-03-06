@@ -7,7 +7,7 @@
 read_export_csv(fname)
 }
 \arguments{
-\item{fname}{Filename (csv file, character)}
+\item{fname}{Filename (character)}
 }
 \value{
 List of 2:
@@ -36,6 +36,9 @@ Variables in data.frame xd:
 }
 }
 \description{
+Read export HydroMonitor file with ObservationWell data.
+}
+\details{
 Trailing letters of observation well are removed.
 }
 \examples{

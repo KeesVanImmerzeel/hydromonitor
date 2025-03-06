@@ -18,7 +18,8 @@ Imports:
     lubridate,
     dplyr,
     ggplot2,
-    terra
+    terra,
+    XML
 Depends: 
     R (>= 3.5)
 Suggests: 

@@ -7,7 +7,7 @@
 read_dino_zip(fname)
 }
 \arguments{
-\item{fname}{Filename (csv file, character)}
+\item{fname}{Filename (character)}
 }
 \value{
 List of 2:
@@ -36,6 +36,9 @@ Variables in data.frame xd:
 }
 }
 \description{
+Read all export Dino *_1.csv files with measured heads from zip file.
+}
+\details{
 Trailing letters of observation well are removed.
 }
 \examples{

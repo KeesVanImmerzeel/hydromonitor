@@ -28,6 +28,7 @@ Functions:
 \itemize{
 \item \code{\link{read_export_csv}}
 \item \code{\link{read_export_csv2}}
+\item \code{\link{read_bro_zip}}
 \item \code{\link{read_dino}}
 \item \code{\link{read_dino_path}}
 \item \code{\link{read_dino_zip}}

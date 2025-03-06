@@ -7,12 +7,15 @@
 read_dino(fname)
 }
 \arguments{
-\item{fname}{Filename (csv file, character)}
+\item{fname}{Filename (character)}
 }
 \value{
 list met twee items: xm (data.frame) met kopgegevens and xd (data.frame) met meetgegevens (data.frame).
 }
 \description{
+Read export Dino *_1.csv file with measured heads.
+}
+\details{
 Trailing letters of observation well are removed.
 }
 \examples{

@@ -23,6 +23,7 @@
 #'
 #' * \code{\link{read_export_csv}}
 #' * \code{\link{read_export_csv2}}
+#' * \code{\link{read_bro_zip}}
 #' * \code{\link{read_dino}}
 #' * \code{\link{read_dino_path}}
 #' * \code{\link{read_dino_zip}}
@@ -84,5 +85,10 @@
 #' @importFrom terra project
 #' @importFrom terra extract
 #' @importFrom terra ext
+#'
+#' @importFrom XML xmlRoot
+#' @importFrom XML getNodeSet
+#' @importFrom XML xmlValue
+#' @importFrom XML xpathSApply
 #'
 NULL

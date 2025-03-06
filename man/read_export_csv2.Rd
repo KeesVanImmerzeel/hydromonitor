@@ -7,7 +7,7 @@
 read_export_csv2(fname)
 }
 \arguments{
-\item{fname}{Filename (csv file, character)}
+\item{fname}{Filename (character)}
 }
 \value{
 List of 2:
@@ -36,6 +36,9 @@ Variables in data.frame xd:
 }
 }
 \description{
+Trailing letters of observation well are removed.
+}
+\details{
 Trailing letters of observation well are removed.
 }
 \examples{

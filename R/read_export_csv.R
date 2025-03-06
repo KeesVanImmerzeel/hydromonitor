@@ -11,9 +11,7 @@ remove_trailing_letter <- function(x) {
 
 #' Read export HydroMonitor file with ObservationWell data.
 #'
-#' Trailing letters of observation well are removed.
-#'
-#' @param fname Filename (csv file, character)
+#' @param fname Filename (character)
 #' @return List of 2:
 #'
 #' * xm Characteristics of the monitoring well (meta data).
@@ -33,6 +31,7 @@ remove_trailing_letter <- function(x) {
 #' * FILTER Filter number (integer)
 #' * DATE Date of observation (POSIXct)
 #' * HEAD Observed head (numeric)
+#' @details Trailing letters of observation well are removed.
 #' @examples
 #' hm1 <- system.file("extdata","export_hm.csv",package="hydromonitor") |> read_export_csv( )
 #' @export
