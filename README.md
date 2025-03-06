@@ -27,6 +27,7 @@ Then load the package with:
 - `read_dino()`: Read export Dino *_1.csv file with measured heads.
 - `read_dino_path`: Read all export Dino *_1.csv files with measured heads in specified folder.
 - `read_dino_zip`: Read all export Dino *_1.csv files with measured heads from zip file.
+- `read_bro_zip`: Read all BROloket export files with measured heads from zip file.
 - `obs_periods`: Create a data frame with observation period for each filter.
 - `filter_on_year()`: Filter HydroMonitor ObservationWell data on year.
 - `filter_on_pol()`: Filter HydroMonitor ObservationWell data with polygon shape.
