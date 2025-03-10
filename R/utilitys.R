@@ -200,7 +200,10 @@ gxg_table <- function(hm) {
 #'}
 #' @export
 hm_plot <- function(hm, output_dir = NULL) {
-  hm$xd %<>% dplyr::full_join(hm$xm, by = c("NAME", "FILTER"))
+  #names <- unique(hm$xm$NAME)
+
+
+  hm$xd %<>% dplyr::left_join(hm$xm, by = c("NAME", "FILTER"))
   hm$xd$FILTER %<>% as.factor()
   x <- suppressWarnings(
     hm$xd %>% dplyr::group_by(NAME) %>% dplyr::do(
